@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "SE KMITL Extension",
+    "version": "1.0",
+    "description": "Shortcut link to CoBoard.",
+    "permissions": [
+      "activeTab"
+    ],
+    "action": {
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  

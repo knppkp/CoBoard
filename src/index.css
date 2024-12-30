@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Quicksand:wght@300..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Playpen+Sans:wght@100..800&family=Quicksand:wght@300..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Existing Tailwind and body styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Istok Web', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Tinos', 'Playpen Sans'
+    sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.istok-web-regular {
+  font-family: "Istok Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.istok-web-bold {
+  font-family: "Istok Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tinos-regular {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tinos-bold {
+  font-family: "Tinos", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.playpen-sans-regular {
+  font-family: "Playpen Sans", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playpen-sans-bold {
+  font-family: "Playpen Sans", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.post-card {
+  word-wrap: break-word;      /* Break long words onto the next line */
+  word-break: break-word;     /* Ensure long words break if necessary */
+  overflow-wrap: break-word;  /* Ensure text within the element will break onto a new line */
+}
+
+/* Optional: You can also limit the height of the card to ensure uniformity */
+.post-card h4, .post-card p {
+  white-space: normal;        /* Allow text to wrap instead of staying on one line */
+}
+
+/* To avoid overly large text in case of long words */
+.post-card p, .post-card h4 {
+  text-overflow: ellipsis;    /* Adds ellipsis (...) if text overflows */
+  overflow: hidden;           /* Prevent overflow of text */
+}
+
+/* Utility class to hide scrollbar while keeping scroll functionality */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
