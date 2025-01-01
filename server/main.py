@@ -14,7 +14,6 @@ import os
 from datetime import date
 import urllib.parse
 import subprocess
-from server.settings import settings
 
 logging.basicConfig(level=logging.INFO)
 
