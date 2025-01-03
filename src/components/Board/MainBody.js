@@ -171,7 +171,7 @@ const MainBody = ({ board, searchForumTerm = "", tagfiltered = [] }) => {
             onClick={toggleDropdown}
             className="w-8 h-8 ml-5 pt-3 md:pt-4 md:w-12 md:h-12"
           >
-            <img src="/asset/sort.svg" alt="Sort" />
+            <img src="/asset/Sort.svg" alt="Sort" />
           </button>
           <div
             className={`absolute right-0 border border-gray-300 rounded-md z-10 bg-white shadow-lg transform transition-all duration-200 ${

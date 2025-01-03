@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const API_BASE_URL = "https://coboard-uwrz.onrender.com";
-fetch(`${API_BASE_URL}/endpoint`, { method: "GET" });
 
 export const fetchForums = async (board) => {
   try {
