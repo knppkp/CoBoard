@@ -99,7 +99,7 @@ class Post(Base):
 
     __table_args__ = (
         CheckConstraint(
-            '(spost_creator IS NOT NULL AND apost_creator IS NULL) OR (spsot_creator IS NULL AND apost_creator IS NOT NULL)',
+            '(spost_creator IS NOT NULL AND apost_creator IS NULL) OR (spost_creator IS NULL AND apost_creator IS NOT NULL)',
             name='chk_creator_only_one'
         ),
     )
