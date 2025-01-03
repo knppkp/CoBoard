@@ -1090,7 +1090,7 @@ async def send_email(request: schemas.EmailRequest):
 
     return {"message": "Email sent successfully!"}
 
-def initialize_data(session: Session):
+def initialize_data(session: Session = Depends(get_db)):
     # Insert initial data for `se_user`
     se_users = [
         {'sid': '52', 'spw': 'admin'},
