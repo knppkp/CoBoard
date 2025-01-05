@@ -17,18 +17,6 @@ import './index.css'; // Tailwind CSS
 
 
 const App = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    axios.get('https://coboard-uwrz.onrender.com')
-      .then(response => {
-        setData(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  }, []);
-
   return (
     <Router>
       <Routes>
