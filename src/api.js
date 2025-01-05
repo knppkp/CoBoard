@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = "https://coboard-uwrz.onrender.com";
+const API_BASE_URL = "https://api.knppkp.me";
 
 export const fetchForums = async (board) => {
   try {
