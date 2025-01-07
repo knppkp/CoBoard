@@ -51,8 +51,20 @@ const CreateForum = ({ isVisible, closeCreateForum, board, onForumCreated }) => 
       });
     }
   };
-  
 
+  const slugify = (forumName) => {
+    return forumName
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[[]/g, "-")
+      .replace(/[\]]/g, "-")
+      .replace(/=/g, "-")
+      .replace(/;/g, "-")
+      .replace(/[^a-z0-9-]/g, "")
+      .replace(/--+/g, "-")
+      .trim();
+  };
+  
   const setUnderlinePosition = (index) => {
     const button = buttonsRef.current[index];
     if (button && underlineRef.current) {
@@ -136,19 +148,6 @@ const CreateForum = ({ isVisible, closeCreateForum, board, onForumCreated }) => 
       }
       alert('Error creating forum. Please try again.');
     }
-  };
-
-  const slugify = (forumName) => {
-    return forumName
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[[]/g, "-")
-      .replace(/[\]]/g, "-")
-      .replace(/=/g, "-")
-      .replace(/;/g, "-")
-      .replace(/[^a-z0-9-]/g, "")
-      .replace(/--+/g, "-")
-      .trim();
   };
 
   if (!isVisible) return null;
