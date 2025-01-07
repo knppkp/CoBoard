@@ -201,7 +201,6 @@ const CreateForum = ({ isVisible, closeCreateForum, board, onForumCreated }) => 
           </div>
           <div ref={appearanceRef}>
             <AppearanceSection
-              handleSortBy={(sortOption)}
               setWallpaper={setWallpaper}
               setFont={setFont}
               setSortBy = {setSortBy}
