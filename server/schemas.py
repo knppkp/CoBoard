@@ -226,7 +226,7 @@ class TopicPost(TopicPostBase):
 
 ###
 class ForumResponse(Forum):
-    creator: Optional[str]
+    creator: Optional[str] = "admin"
     topics: List[Topic]
     tags: List[Tag]
     btags: List[Tag]
