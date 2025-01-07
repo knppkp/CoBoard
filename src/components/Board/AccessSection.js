@@ -23,12 +23,6 @@ const AccessSection = ({ handleAccess = () => {}, allowed, setAllowed }) => {
   };
 
   useEffect(() => {
-    console.log(
-      "StartsWithValues:",
-      startsWithValues,
-      "OnlyValues:",
-      onlyValues
-    );
     if (startsWithValues.length === 0 && onlyValues.length === 0) {
       handleAccessSelection(1, "Public", "/asset/public_button.svg");
     } else {

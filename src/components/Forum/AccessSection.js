@@ -42,7 +42,6 @@ const AccessSection = ({
             .filter((userId) => String(userId).length === 8)
         );
 
-        console.log(allowed, startsWithValues, onlyValues);
       } catch (error) {
         console.error("Failed to load topics", error);
       }
@@ -59,12 +58,6 @@ const AccessSection = ({
   };
 
   useEffect(() => {
-    console.log(
-      "StartsWithValues:",
-      startsWithValues,
-      "OnlyValues:",
-      onlyValues
-    );
     if (startsWithValues.length === 0 && onlyValues.length === 0) {
       handleAccessSelection(1, "Public", "/asset/public_button.svg");
     } else {

@@ -74,7 +74,6 @@ const CreateForum = ({ isVisible, closeCreateForum, board, onForumCreated }) => 
             if (!data || !data.forums || !Array.isArray(data.forums)) {
                 throw new Error("Invalid data format");
             }
-            console.log("Fetched Forums:", data.forums);
             setBoardTags(data.tags);
         } catch (error) {
             console.error("Failed to load forums", error);
@@ -101,15 +100,14 @@ const CreateForum = ({ isVisible, closeCreateForum, board, onForumCreated }) => 
       access: access,
       font: font,
       sortby: sortby,
-      creator_id: user.sid, // Replace with actual creator ID
-      board: board, // Include the board
+      creator_id: user.sid,
+      slug: slugify(title),
+      board: board,
       tags: tags
     };
 
     try {
-      console.log(forumData);
       const createdForum = await createForum(board, forumData); // Create forum
-      console.log('Created forum:', createdForum);
 
       if (access === 0) {
         for (const user_id of allowed) {
@@ -138,6 +136,19 @@ const CreateForum = ({ isVisible, closeCreateForum, board, onForumCreated }) => 
       }
       alert('Error creating forum. Please try again.');
     }
+  };
+
+  const slugify = (forumName) => {
+    return forumName
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[[]/g, "-")
+      .replace(/[\]]/g, "-")
+      .replace(/=/g, "-")
+      .replace(/;/g, "-")
+      .replace(/[^a-z0-9-]/g, "")
+      .replace(/--+/g, "-")
+      .trim();
   };
 
   if (!isVisible) return null;
@@ -191,7 +202,7 @@ const CreateForum = ({ isVisible, closeCreateForum, board, onForumCreated }) => 
           </div>
           <div ref={appearanceRef}>
             <AppearanceSection
-              handleSortBy={(sortOption) => console.log('Sort by:', sortOption)}
+              handleSortBy={(sortOption)}
               setWallpaper={setWallpaper}
               setFont={setFont}
               setSortBy = {setSortBy}

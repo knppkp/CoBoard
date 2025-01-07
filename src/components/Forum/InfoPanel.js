@@ -59,7 +59,6 @@ const InfoPanel = ({ isVisible, closeInfoPanel, board, forum_name }) => {
         setTotalComments(commentsCount);
         setTotalReactions(reactionsCount);
         setContributor(contributorsSet.size);
-        console.log(contributorsSet);
   
       } catch (error) {
         console.error("Failed to load topics", error);

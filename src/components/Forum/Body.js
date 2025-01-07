@@ -40,7 +40,6 @@ const Body = ({ board, forum_name, searchTopicTerm = "" }) => {
 
         setForumData(response);
         let topics = response.topics || [];
-        console.log(response);
 
         // Apply default sorting based on default_sort
         if (default_sort === 0) {

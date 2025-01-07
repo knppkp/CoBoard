@@ -1,30 +1,23 @@
 import React from 'react';
 
 const ShareSection = React.forwardRef((props, ref) => {
-  // Get the current URL
   const currentUrl = window.location.href;
 
-  // Function to share the current URL via email
   const shareViaEmail = () => {
     const subject = 'Check out this page!';
     const body = `I found this interesting page: ${currentUrl}`;
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
-  // Function to share the current URL on Facebook
   const shareOnFacebook = () => {
     const currentUrl = window.location.href;
-    const bodyText = "Check out this awesome page!"; // Your custom message
+    const bodyText = "Check out this awesome page!";
     
-    // Construct the Facebook share URL with the current URL and the body text
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php`;
     navigator.clipboard.writeText(currentUrl);
-    // Open the share dialog in a new window with proper dimensions
     window.open(facebookUrl, 'width=600,height=400');
   };
   
-
-  // Function to share the current URL on Twitter
   const shareOnTwitter = () => {
     const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=Check%20this%20out!`;
     window.open(twitterUrl, 'width=600,height=400');

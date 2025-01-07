@@ -56,7 +56,6 @@ const Tab = ({ board, forum_name }) => {
         const createdBookmark = await addBookmark(board, forum_name, id, status);
         setIsBookmarked(true);
         alert("Bookmark added.");
-        console.log('Created bookmark:', createdBookmark);
       }
     } catch (error) {
       if (error.response) {

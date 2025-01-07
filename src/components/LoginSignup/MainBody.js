@@ -27,7 +27,6 @@ const MainBody = () => {
         if (!response || typeof response !== 'object') {
           throw new Error("Invalid response from server");
         }
-        console.log(response);
         setSE(response.se);
         setAnonymous(response.anonymous);
       } catch (error) {

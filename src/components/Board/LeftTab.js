@@ -29,7 +29,6 @@ const LeftTab = ({ board, setTagFiltered }) => {
         if (!data || !data.tags || !Array.isArray(data.tags)) {
           throw new Error("Invalid data format");
         }
-        console.log("Fetched Tags:", data.tags);
         setTags(data.tags);
       } catch (error) {
         console.error("Failed to load forums", error);
@@ -75,11 +74,6 @@ const LeftTab = ({ board, setTagFiltered }) => {
       ...tags.filter((tag) => selectedTags.includes(tag.tag_id)),
       ...unselectedTags.slice(0, 5),
     ];
-  };
-
-  const sendSelectedTags = (tags) => {
-    console.log("Sending selected tags:", tags);
-    alert(`Sending tags: ${tags.join(", ")}`);
   };
 
   return (

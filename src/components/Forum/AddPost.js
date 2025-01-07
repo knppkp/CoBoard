@@ -43,7 +43,6 @@ const AddPost = ({
         topic_id,
         postData
       );
-      console.log("Created post:", createdPost);
 
       if (selectedFiles.length > 0) {
         for (const file of selectedFiles) {

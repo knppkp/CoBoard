@@ -59,9 +59,7 @@ const Preview = () => {
                         });
                     });
                 });
-                console.log(contributorsSet);
                 contributorsSet.delete(creator_id);
-                console.log(contributorsSet);
                 setContributor(contributorsSet.size);
             } catch (error) {
                 setError("Failed to load topics. " + (error.message || ''));

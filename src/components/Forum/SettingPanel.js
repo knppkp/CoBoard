@@ -121,9 +121,6 @@ const SettingPanel = ({ isVisible, closeSettingPanel, board, forum_name}) => {
     }
   };
 
-  
-  
-
   if (!isVisible) return null;
 
   return (
